@@ -8,6 +8,14 @@ RoboBattleStates.Boot.prototype = {
     //assets we'll use in the loading screen
     this.load.image('logo', 'assets/logo.png');
     this.load.image('preloadbar', 'assets/preloader-bar.png');
+
+    this.load.script('webfont', "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js");
+    WebFontConfig = {
+        active: function() { RoboBattleStates.game.time.events.add(Phaser.Timer.SECOND, createText, this); },
+        google: {
+          families: ['Allerta Stencil']
+        }
+    };
   },
 
   create: function() {

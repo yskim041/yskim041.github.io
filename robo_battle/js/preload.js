@@ -2,13 +2,6 @@ var RoboBattleStates = RoboBattleStates || {};
  
 //loading the game assets
 RoboBattleStates.Preload = function(){};
-
-WebFontConfig = {
-    active: function() { RoboBattleStates.game.time.events.add(Phaser.Timer.SECOND, createText, this); },
-    google: {
-      families: ['Allerta Stencil']
-    }
-};
  
 RoboBattleStates.Preload.prototype = {
   preload: function() {
@@ -22,8 +15,6 @@ RoboBattleStates.Preload.prototype = {
     this.load.setPreloadSprite(this.preloadBar);
  
     //load game assets
-    this.load.script('webfont', "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js");
-
     this.load.image('background', 'assets/bg_floors.png');
     this.load.spritesheet('player', 'assets/robot.png', 46, 38);
     this.load.spritesheet('probe', 'assets/probe.png', 24, 24);
