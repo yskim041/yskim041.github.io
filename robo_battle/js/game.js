@@ -150,7 +150,7 @@ RoboBattleStates.Game.prototype = {
 
         // texts -------------------------------------------------------------------
         scoreText = this.add.text(28, 18, score);
-        scoreText.font = 'Allerta Stencil';
+        scoreText.font = 'Arial';
         scoreText.fontSize = 52;
         scoreText.fill = '#ffffff';
         scoreText.align = 'center';
