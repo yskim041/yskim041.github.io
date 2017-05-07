@@ -73,7 +73,7 @@ RoboBattleStates.Game.prototype = {
     },
 
     create: function() {
-        // this.stage.disableVisibilityChange = true;
+        this.stage.disableVisibilityChange = true;
 
         isGameOver = false;
         score = 10;

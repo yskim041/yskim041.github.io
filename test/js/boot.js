@@ -19,6 +19,8 @@ RoboBattleStates.Boot.prototype = {
     },
 
     create: function() {
+        if (!game.device.desktop){ game.input.onDown.add(gofull, this); }
+        
         this.game.stage.backgroundColor = '#fff';
 
         this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
