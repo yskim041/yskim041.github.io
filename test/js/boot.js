@@ -19,7 +19,10 @@ RoboBattleStates.Boot.prototype = {
     },
 
     create: function() {
-        if (!this.game.device.desktop){ this.game.input.onDown.add(gofull, this); }
+        if (!this.game.device.desktop)
+        {
+            this.game.scale.startFullScreen(false);
+        }
 
         this.game.stage.backgroundColor = '#fff';
 
