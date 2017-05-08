@@ -245,10 +245,10 @@ RoboBattleStates.Game.prototype = {
     c_up.fixedToCamera = true;
     c_up.scale.setTo(1.1, 1.1);
     c_up.anchor.set(0, 1);
-    c_up.events.onInputOver.add(function(){ c_up_pressed = true }, this);
-    // c_up.events.onInputDown.add(function(){ c_up_pressed = true }, this);
-    c_up.events.onInputOut.add(function(){ c_up_pressed = false }, this);
-    // c_up.events.onInputUp.add(function(){ c_up_pressed = false }, this);
+    // c_up.events.onInputOver.add(function(){ c_up_pressed = true }, this);
+    // c_up.events.onInputOut.add(function(){ c_up_pressed = false }, this);
+    c_up.events.onInputDown.add(function(){ c_up_pressed = true }, this);
+    c_up.events.onInputUp.add(function(){ c_up_pressed = false }, this);
 
     c_down = this.add.button(99, this.game.height - 17,
                              'c_down', null, this,
@@ -256,10 +256,10 @@ RoboBattleStates.Game.prototype = {
     c_down.fixedToCamera = true;
     c_down.scale.setTo(1.1, 1.1);
     c_down.anchor.set(0, 1);
-    c_down.events.onInputOver.add(function(){ c_down_pressed = true }, this);
-    // c_down.events.onInputDown.add(function(){ c_down_pressed = true }, this);
-    c_down.events.onInputOut.add(function(){ c_down_pressed = false }, this);
-    // c_down.events.onInputUp.add(function(){ c_down_pressed = false }, this);
+    // c_down.events.onInputOver.add(function(){ c_down_pressed = true }, this);
+    // c_down.events.onInputOut.add(function(){ c_down_pressed = false }, this);
+    c_down.events.onInputDown.add(function(){ c_down_pressed = true }, this);
+    c_down.events.onInputUp.add(function(){ c_down_pressed = false }, this);
 
     c_left = this.add.button(15, this.game.height - 90,
                              'c_left', null, this,
@@ -267,10 +267,10 @@ RoboBattleStates.Game.prototype = {
     c_left.fixedToCamera = true;
     c_left.scale.setTo(1.1, 1.1);
     c_left.anchor.set(0, 1);
-    c_left.events.onInputOver.add(function(){ c_left_pressed = true }, this);
-    // c_left.events.onInputDown.add(function(){ c_left_pressed = true }, this);
-    c_left.events.onInputOut.add(function(){ c_left_pressed = false }, this);
-    // c_left.events.onInputUp.add(function(){ c_left_pressed = false }, this);
+    // c_left.events.onInputOver.add(function(){ c_left_pressed = true }, this);
+    // c_left.events.onInputOut.add(function(){ c_left_pressed = false }, this);
+    c_left.events.onInputDown.add(function(){ c_left_pressed = true }, this);
+    c_left.events.onInputUp.add(function(){ c_left_pressed = false }, this);
 
     c_right = this.add.button(134, this.game.height - 90,
                               'c_right', null, this,
@@ -278,10 +278,10 @@ RoboBattleStates.Game.prototype = {
     c_right.fixedToCamera = true;
     c_right.scale.setTo(1.1, 1.1);
     c_right.anchor.set(0, 1);
-    c_right.events.onInputOver.add(function(){ c_right_pressed = true }, this);
-    // c_right.events.onInputDown.add(function(){ c_right_pressed = true }, this);
-    c_right.events.onInputOut.add(function(){ c_right_pressed = false }, this);
-    // c_right.events.onInputUp.add(function(){ c_right_pressed = false }, this);
+    // c_right.events.onInputOver.add(function(){ c_right_pressed = true }, this);
+    // c_right.events.onInputOut.add(function(){ c_right_pressed = false }, this);
+    c_right.events.onInputDown.add(function(){ c_right_pressed = true }, this);
+    c_right.events.onInputUp.add(function(){ c_right_pressed = false }, this);
 
     c_up_pressed = false;
     c_down_pressed = false;
