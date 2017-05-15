@@ -486,9 +486,10 @@ RoboBattleStates.Game.prototype = {
   gameOver: function() {
     this.addFogsAt(player.x, player.y);
     player.kill();
+    name_text.destroy();
     isGameOver = true;
 
-    timer.loop(1000, this.goToMenu, this);
+    timer.loop(100, this.goToMenu, this);
     timer.start();
   },
 
@@ -728,7 +729,6 @@ RoboBattleStates.Game.prototype = {
       this.addItemAt(opp.x, opp.y);
     }
     bullet.kill();
-    this.delete_opponent_by_key(opp.obkey);
   },
 
   crashBullets: function(my_bullet, opp_bullet) {
