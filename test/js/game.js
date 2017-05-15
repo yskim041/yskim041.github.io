@@ -394,6 +394,7 @@ RoboBattleStates.Game.prototype = {
     this.physics.arcade.overlap(player, opp_bullets, this.gotShot, null, this);
     this.physics.arcade.overlap(bullets, opp_bullets, this.crashBullets, null, this);
     this.physics.arcade.overlap(bullets, opponents_group, this.destroy_opponent, null, this);
+    this.physics.arcade.overlap(opp_bullets, opponents_group, this.destroy_opponent, null, this);
     this.physics.arcade.overlap(bullets, probes, this.destroyProbe, null, this);
     this.physics.arcade.overlap(player, items, this.collectItem, null, this);
     this.physics.arcade.overlap(player, probes, this.gameOver, null, this);
