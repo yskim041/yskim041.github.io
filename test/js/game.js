@@ -690,7 +690,7 @@ RoboBattleStates.Game.prototype = {
 
         bullet.bid = bid_count;
         bid_count += 1;
-        if (bid_count > 10) {
+        if (bid_count >= 10) {
           bid_count = 1;
         }
         this.db_update_bullet(bx, by, bullet.bid);
@@ -861,7 +861,7 @@ RoboBattleStates.Game.prototype = {
     x = Math.round(x);
     y = Math.round(y);
     // database.ref('game/map/bullet/' + nickname + '/' + bid).set([x, y]);
-    database.ref('game/map/bullet/' + nickname).set([x, y]);
+    database.ref('game/map/bullet/' + nickname).set([x, y, bid]);
   },
 };
 
