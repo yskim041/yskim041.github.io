@@ -728,7 +728,7 @@ RoboBattleStates.Game.prototype = {
       this.addItemAt(opp.x, opp.y);
     }
     bullet.kill();
-    opp.kill();
+    this.delete_opponent_by_key(opp.obkey);
   },
 
   crashBullets: function(my_bullet, opp_bullet) {
@@ -792,6 +792,7 @@ RoboBattleStates.Game.prototype = {
       opp_name.fill = '#101213';
       opp_name.anchor.set(0.5);
 
+      opp_bot.obkey = opp.key;
       opponents[opp.key] = opp_bot;
       opponents_names[opp.key] = opp_name;
 
@@ -822,6 +823,13 @@ RoboBattleStates.Game.prototype = {
     opponents[opp.key] = null;
     opponents_names[opp.key].destroy();
     opponents_names[opp.key] = null;
+  },
+
+  delete_opponent_by_key: function(obkey) {
+    opponents[obkey].kill();
+    opponents[obkey] = null;
+    opponents_names[obkey].destroy();
+    opponents_names[obkey] = null;
   },
 
   update_rank: function(ranker_name, ranker_score, rank) {
