@@ -216,6 +216,7 @@ RoboBattleStates.Menu.prototype = {
           fx_start.play();
           bgm.stop();
           database.ref('game/map/loc/' + nickname).set([-1, -1]);
+          database.ref('game/map/bullet/' + nickname).set([-1, -1]);
           game_obj.game.state.start('Game', true, false, nickname, is_sound_on); 
           return;
         }
